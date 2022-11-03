@@ -1,0 +1,1 @@
+az deployment sub validate --location westeurope --name xyz --template-file .\example1\bicep\main.bicep --parameters .\example1\bicep\parameters.json
