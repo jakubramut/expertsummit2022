@@ -7,6 +7,69 @@
         },
         "location": {
             "value": "westeurope"
+        },
+        "kvParams": {
+            "value" : {
+                "sku": {
+                    "family": "A",
+                    "name": "Standard"
+                },
+                "accessPolcies" : [
+                    {
+                        "objectId": "0514a8c8-5ffc-4f1a-921c-3c5e6d77f94f",
+                        "permissions": {
+                            "keys": [
+                                "Get",
+                                "List"
+                            ],
+                            "secrets": [
+                                "Get",
+                                "List",
+                                "Delete",
+                                "Recover",
+                                "Backup"
+                            ],
+                            "certificates": [
+                                "Get",
+                                "List"
+                            ]
+                        }
+                    },
+                    {
+                        "objectId": "3a6f1a9a-5b26-4454-8fa7-6e6f8494843a",
+                        "permissions": {
+                            "keys": [
+                                "Get",
+                                "List"
+                            ],
+                            "secrets": [
+                                "Get",
+                                "List",
+                                "Set"
+                            ],
+                            "certificates": [
+                                "Get",
+                                "List"
+                            ]
+                        }
+                    },
+                    {
+                        "objectId": "a79a4d70-5bd8-4e8e-bc0a-dd2e66bf8abb",
+                        "permissions": {
+                            "keys": [
+                                "Get"
+                            ],
+                            "secrets": [
+                                "Get",
+                                "List"
+                            ],
+                            "certificates": [
+                                "Get"
+                            ]
+                        }
+                    }
+                ]
+            }
         }
     }
 }

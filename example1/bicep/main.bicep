@@ -9,7 +9,7 @@ param location string
 param env string
 
 @description('Company name')
-param company string = 'expertsummit'
+param company string = 'summit'
 
 var rg_name = 'bp-${company}-${env}-${substring(location, 0, 2)}-rg-01'
 var kv_name = 'bp${company}${env}${substring(location, 0, 2)}kv01'

@@ -5,7 +5,7 @@ locals {
 variable "company" {
   type        = string
   description = "Company name"
-  default     = "expertsummit"
+  default     = "summit"
 }
 
 variable "env" {

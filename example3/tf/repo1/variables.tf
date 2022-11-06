@@ -1,6 +1,7 @@
 locals {
-  rg_name = "tf-${var.company}-${var.env}-${substr(var.location, 0, 2)}-rg-01"
-  kv_name = "tf${var.company}${var.env}${substr(var.location, 0, 2)}kv01"
+  rg_name   = "tf-${var.company}-${var.env}-${substr(var.location, 0, 2)}-rg-shd-01"
+  kv_name   = "tf${var.company}${var.env}${substr(var.location, 0, 2)}kv01"
+  vnet_name = "tf-${var.company}-${var.env}-${substr(var.location, 0, 2)}-vnet-01"
 }
 
 variable "company" {
@@ -27,4 +28,21 @@ variable "location" {
     condition     = contains(["westeurope", "northeurope"], var.location)
     error_message = "Validation error for location variable."
   }
+}
+
+variable "kvParams" {
+  type = object({
+    sku = object({
+      family = string
+      name   = string
+    })
+    accessPolicies = list(object({
+      objectId = string
+      permissions = object({
+        keys         = list(string)
+        secrets      = list(string)
+        certificates = list(string)
+      })
+    }))
+  })
 }

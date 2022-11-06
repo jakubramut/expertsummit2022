@@ -9,9 +9,12 @@ param location string
 param env string
 
 @description('Company name')
-param company string = 'expertsummit'
+param company string = 'summit'
 
-var rg_name = 'bp-${company}-${env}-${substring(location, 0, 2)}-rg-01'
+@description('Key Vault parameters')
+param kvParams object
+
+var rg_name = 'bp-${company}-${env}-${substring(location, 0, 2)}-rg-shd-01'
 var kv_name = 'bp${company}${env}${substring(location, 0, 2)}kv01'
 
 resource myRg 'Microsoft.Resources/resourceGroups@2021-04-01' = {
@@ -19,11 +22,13 @@ resource myRg 'Microsoft.Resources/resourceGroups@2021-04-01' = {
   location: location
 }
 
-module myKv 'modules/kv.bicep' = {
+module myKv './modules/kv.bicep' = {
   scope: myRg
   name: 'myKv'
   params: {
     name: kv_name
     location: location
+    sku: kvParams.sku
+    accessPolicies: kvParams.accessPolcies
   }
 }

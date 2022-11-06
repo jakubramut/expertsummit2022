@@ -1,0 +1,55 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "env": {
+            "value": "stage"
+        },
+        "location": {
+            "value": "westeurope"
+        },
+        "vnetAddressPrefix": {
+            "value": "10.100.0.0/22"
+        },
+        "saParams": {
+            "value": {
+                "sku": "Standard_LRS",
+                "kind": "StorageV2",
+                "accessTier": "Hot",
+                "networkAcls": {
+                    "bypass": "AzureServices",
+                    "defaultAction": "Deny",
+                    "ipRules": [],
+                    "virtualNetworkRules": []
+                }
+            }
+        },
+        "aksParams": {
+            "value": {
+                "userPoolProfile": {
+                    "count": 1,
+                    "minCount": 1,
+                    "maxCount": 3,
+                    "enableAutoScaling": true,
+                    "name": "user01",
+                    "mode": "User",
+                    "osType": "Linux",
+                    "type": "VirtualMachineScaleSets",
+                    "vmSize": "Standard_D2s_v3"
+                },
+                "systemPoolProfile": {
+                    "count": 1,
+                    "minCount": 1,
+                    "maxCount": 2,
+                    "enableAutoScaling": true,                    
+                    "name": "system",
+                    "mode": "System",
+                    "osType": "Linux",
+                    "type": "VirtualMachineScaleSets",
+                    "vmSize": "Standard_D2s_v3"
+                },
+                "clusterAdminAadGroupObjectId": "0514a8c8-5ffc-4f1a-921c-3c5e6d77f94f"
+            }
+        }
+    }
+}

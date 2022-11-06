@@ -1,6 +1,9 @@
 locals {
-  rg_name = "tf-${var.company}-${var.env}-${substr(var.location, 0, 2)}-rg-01"
-  kv_name = "tf${var.company}${var.env}${substr(var.location, 0, 2)}kv01"
+  rg_name       = "tf-${var.company}-${var.env}-${substr(var.location, 0, 2)}-rg-01"
+  vnet_name     = "tf-${var.company}-${var.env}-${substr(var.location, 0, 2)}-vnet-01"
+  aks_name      = "tf-${var.company}-${var.env}-${substr(var.location, 0, 2)}-aks-01"
+  st_name       = "tf${var.company}${var.env}${substr(var.location, 0, 2)}st01"
+  pdn_zone_name = "privatelink.blob.core.windows.net"
 }
 
 variable "company" {
@@ -27,4 +30,9 @@ variable "location" {
     condition     = contains(["westeurope", "northeurope"], var.location)
     error_message = "Validation error for location variable."
   }
+}
+
+variable "vnetAddressPrefix" {
+  type        = string
+  description = "Virtual Network address prefix"
 }
