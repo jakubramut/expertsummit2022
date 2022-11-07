@@ -20,11 +20,11 @@ param vnetAddressPrefix string
 @description('AKS Subnet Address Prefix')
 param aksSubnetAddressPrefix string
 
-var rg_name = 'bp-${company}-${env}-${substring(location, 0, 2)}-rg-01'
-var shd_rg_name = 'bp-${company}-${env}-${substring(location, 0, 2)}-rg-shd-01'
-var kv_name = 'bp${company}${env}${substring(location, 0, 2)}kv01'
-var aks_name = 'bp-${company}-${env}-${substring(location, 0, 2)}-aks-01'
-var vnet_name = 'bp-${company}-${env}-${substring(location, 0, 2)}-vnet-01'
+var rg_name = 'bp-${company}-${env}-${substring(location, 0, 2)}-rg-0302'
+var shd_rg_name = 'bp-${company}-${env}-${substring(location, 0, 2)}-rg-shd-0301'
+var kv_name = 'bp${company}${env}${substring(location, 0, 2)}kv0302'
+var aks_name = 'bp-${company}-${env}-${substring(location, 0, 2)}-aks-0302'
+var vnet_name = 'bp-${company}-${env}-${substring(location, 0, 2)}-vnet-0302'
 
 resource myRg 'Microsoft.Resources/resourceGroups@2021-04-01' = {
   name: rg_name

@@ -17,8 +17,8 @@ param vnetAddressPrefix string
 @description('Storage account parameters')
 param saParams object
 
-var vnet_name = 'bp-${company}-${env}-${substring(location, 0, 2)}-vnet-01'
-var st_name = 'bp${company}${env}${substring(location, 0, 2)}st01'
+var vnet_name = 'bp-${company}-${env}-${substring(location, 0, 2)}-vnet-05'
+var st_name = 'bp${company}${env}${substring(location, 0, 2)}st05'
 
 module nsgcommon './modules/nsg.bicep' = {
   name: 'nsgcommon'

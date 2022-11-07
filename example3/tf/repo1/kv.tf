@@ -9,7 +9,7 @@ resource "azurerm_key_vault" "my_kv" {
   sku_name                    = "standard"
 }
 
-resource "azurerm_key_vault_access_policy" "example" {
+resource "azurerm_key_vault_access_policy" "kv_access_policy" {
   for_each = { for i, v in var.kvParams.accessPolicies : i => v }
 
   key_vault_id = azurerm_key_vault.my_kv.id

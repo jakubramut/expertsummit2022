@@ -8,6 +8,19 @@
         "location": {
             "value": "westeurope"
         },
+        "muiKvAccessPolicy": {
+            "value": {
+                "keys": [
+                    "Get"
+                ],
+                "secrets": [
+                    "Get"
+                ],
+                "certificates": [
+                    "Get"
+                ]
+            }
+        },
         "kvParams": {
             "value" : {
                 "sku": {

@@ -28,7 +28,7 @@ resource policyAssignment 'Microsoft.Authorization/policyAssignments@2020-09-01'
   }
 }
 
-resource policyTestRg 'Microsoft.Resources/resourceGroups@2021-04-01' = {
-  name: rg_name
-  location: location
-}
+// resource policyTestRg 'Microsoft.Resources/resourceGroups@2021-04-01' = {
+//   name: rg_name
+//   location: location
+// }

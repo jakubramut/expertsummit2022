@@ -1,8 +1,7 @@
 locals {
-  existing_rg_name = "rg-test-02"
-  vnet_name        = "tf-${var.company}-${var.env}-${substr(var.location, 0, 2)}-vnet-01"
-  st_name          = "tf${var.company}${var.env}${substr(var.location, 0, 2)}st01"
-  pdn_zone_name    = "privatelink.blob.core.windows.net"
+  existing_rg_name = "tf-rg-test-05"
+  vnet_name        = "tf-${var.company}-${var.env}-${substr(var.location, 0, 2)}-vnet-05"
+  st_name          = "tf${var.company}${var.env}${substr(var.location, 0, 2)}st05"
 }
 
 variable "company" {

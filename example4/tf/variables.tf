@@ -1,8 +1,8 @@
 locals {
-  rg_name       = "tf-${var.company}-${var.env}-${substr(var.location, 0, 2)}-rg-01"
-  vnet_name     = "tf-${var.company}-${var.env}-${substr(var.location, 0, 2)}-vnet-01"
-  aks_name      = "tf-${var.company}-${var.env}-${substr(var.location, 0, 2)}-aks-01"
-  st_name       = "tf${var.company}${var.env}${substr(var.location, 0, 2)}st01"
+  rg_name       = "tf-${var.company}-${var.env}-${substr(var.location, 0, 2)}-rg-04"
+  vnet_name     = "tf-${var.company}-${var.env}-${substr(var.location, 0, 2)}-vnet-04"
+  aks_name      = "tf-${var.company}-${var.env}-${substr(var.location, 0, 2)}-aks-04"
+  st_name       = "tf${var.company}${var.env}${substr(var.location, 0, 2)}st04"
   pdn_zone_name = "privatelink.blob.core.windows.net"
 }
 

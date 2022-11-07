@@ -17,10 +17,9 @@
 #   virtual_network_name                           = azurerm_virtual_network.vnet.name
 #   resource_group_name                            = azurerm_resource_group.my_rg.name
 #   address_prefixes                               = ["10.100.1.0/24"]
-#   private_endpoint_network_policies_enabled      = true
+#   private_endpoint_network_policies_enabled      = false
 #   private_link_service_network_policies_enabled  = true
 # }
-
 
 # resource "azurerm_network_security_group" "nsg_aks" {
 #   name                = "aks-nsg"

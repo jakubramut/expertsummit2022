@@ -1,9 +1,9 @@
 locals {
-  rg_name     = "tf-${var.company}-${var.env}-${substr(var.location, 0, 2)}-rg-01"
-  rg_shd_name = "tf-${var.company}-${var.env}-${substr(var.location, 0, 2)}-rg-shd-01"
-  kv_name     = "tf${var.company}${var.env}${substr(var.location, 0, 2)}kv01"
-  vnet_name   = "tf-${var.company}-${var.env}-${substr(var.location, 0, 2)}-vnet-01"
-  aks_name    = "tf-${var.company}-${var.env}-${substr(var.location, 0, 2)}-aks-01"
+  rg_name     = "tf-${var.company}-${var.env}-${substr(var.location, 0, 2)}-rg-0302"
+  rg_shd_name = "tf-${var.company}-${var.env}-${substr(var.location, 0, 2)}-rg-shd-0301"
+  kv_name     = "tf${var.company}${var.env}${substr(var.location, 0, 2)}kv0302"
+  vnet_name   = "tf-${var.company}-${var.env}-${substr(var.location, 0, 2)}-vnet-0302"
+  aks_name    = "tf-${var.company}-${var.env}-${substr(var.location, 0, 2)}-aks-0302"
 }
 
 variable "company" {

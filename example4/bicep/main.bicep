@@ -20,10 +20,10 @@ param saParams object
 @description('AKS deployment parameters')
 param aksParams object
 
-var rg_name = 'bp-${company}-${env}-${substring(location, 0, 2)}-rg-01'
-var vnet_name = 'bp-${company}-${env}-${substring(location, 0, 2)}-vnet-01'
-var st_name = 'bp${company}${env}${substring(location, 0, 2)}st01'
-var aks_name = 'bp-${company}-${env}-${substring(location, 0, 2)}-aks-01'
+var rg_name = 'bp-${company}-${env}-${substring(location, 0, 2)}-rg-04'
+var vnet_name = 'bp-${company}-${env}-${substring(location, 0, 2)}-vnet-04'
+var st_name = 'bp${company}${env}${substring(location, 0, 2)}st04'
+var aks_name = 'bp-${company}-${env}-${substring(location, 0, 2)}-aks-04'
 
 var pdnszone_name_blob = 'privatelink.blob.core.windows.net'
 

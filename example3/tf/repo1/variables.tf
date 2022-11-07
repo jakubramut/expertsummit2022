@@ -1,7 +1,7 @@
 locals {
-  rg_name   = "tf-${var.company}-${var.env}-${substr(var.location, 0, 2)}-rg-shd-01"
-  kv_name   = "tf${var.company}${var.env}${substr(var.location, 0, 2)}kv01"
-  vnet_name = "tf-${var.company}-${var.env}-${substr(var.location, 0, 2)}-vnet-01"
+  rg_name   = "tf-${var.company}-${var.env}-${substr(var.location, 0, 2)}-rg-shd-0301"
+  kv_name   = "tf${var.company}${var.env}${substr(var.location, 0, 2)}kv0301"
+  mui_name = "tf-${var.company}-${var.env}-${substr(var.location, 0, 2)}-mui-0301"
 }
 
 variable "company" {

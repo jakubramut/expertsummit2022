@@ -15,7 +15,7 @@ variable "env" {
 
   validation {
     condition     = contains(["dev", "test", "stage", "prod"], var.env)
-    error_message = "Validation error for env variable."
+    error_message = "Validation error for env variable"
   }
 }
 
