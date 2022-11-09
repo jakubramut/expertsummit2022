@@ -25,6 +25,7 @@ var vnet_name = 'bp-${company}-${env}-${substring(location, 0, 2)}-vnet-04'
 var st_name = 'bp${company}${env}${substring(location, 0, 2)}st04'
 var aks_name = 'bp-${company}-${env}-${substring(location, 0, 2)}-aks-04'
 
+#disable-next-line no-hardcoded-env-urls
 var pdnszone_name_blob = 'privatelink.blob.core.windows.net'
 
 resource myRg 'Microsoft.Resources/resourceGroups@2021-04-01' = {

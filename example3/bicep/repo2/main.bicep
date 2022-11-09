@@ -21,8 +21,8 @@ param vnetAddressPrefix string
 param aksSubnetAddressPrefix string
 
 var rg_name = 'bp-${company}-${env}-${substring(location, 0, 2)}-rg-0302'
-var shd_rg_name = 'bp-${company}-${env}-${substring(location, 0, 2)}-rg-shd-0301'
-var kv_name = 'bp${company}${env}${substring(location, 0, 2)}kv0302'
+var shd_rg_name = 'bp-${company}-${env}-${substring(location, 0, 2)}-rg-shd-03-01'
+var kv_name = 'bp${company}${env}${substring(location, 0, 2)}kv0301'
 var aks_name = 'bp-${company}-${env}-${substring(location, 0, 2)}-aks-0302'
 var vnet_name = 'bp-${company}-${env}-${substring(location, 0, 2)}-vnet-0302'
 

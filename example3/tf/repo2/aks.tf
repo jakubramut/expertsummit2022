@@ -1,7 +1,7 @@
 resource "azurerm_kubernetes_cluster" "aks" {
   name                                = local.aks_name
-  location                            = data.azurerm_resource_group.my_shd_rg.location
-  resource_group_name                 = data.azurerm_resource_group.my_shd_rg.name
+  location                            = azurerm_resource_group.my_rg.location
+  resource_group_name                 = azurerm_resource_group.my_rg.name
   dns_prefix                          = "tf01"
   private_cluster_enabled             = true
   private_cluster_public_fqdn_enabled = false

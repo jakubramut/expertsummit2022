@@ -1,7 +1,7 @@
 locals {
   rg_name     = "tf-${var.company}-${var.env}-${substr(var.location, 0, 2)}-rg-0302"
   rg_shd_name = "tf-${var.company}-${var.env}-${substr(var.location, 0, 2)}-rg-shd-0301"
-  kv_name     = "tf${var.company}${var.env}${substr(var.location, 0, 2)}kv0302"
+  kv_name     = "tf${var.company}${var.env}${substr(var.location, 0, 2)}kv0301"
   vnet_name   = "tf-${var.company}-${var.env}-${substr(var.location, 0, 2)}-vnet-0302"
   aks_name    = "tf-${var.company}-${var.env}-${substr(var.location, 0, 2)}-aks-0302"
 }

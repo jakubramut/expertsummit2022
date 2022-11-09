@@ -1,3 +1,4 @@
 az deployment sub validate --location westeurope --name xyz --template-file .\example1\bicep\main.bicep --parameters .\example1\bicep\parameters.json
+az deployment sub create --location westeurope --name xyz --template-file .\main.bicep --parameters .\parameters.json
 
-az deployment group validate --name xyz --resource-group bp-rg-test-01 --mode Complete --template-file .\main.bicep --parameters .\parameters.json
+az deployment group create --name xyz --resource-group bp-rg-test-01 --mode Complete --template-file .\main.bicep --parameters .\parameters.json
